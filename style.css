@@ -1,0 +1,917 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff9ec4,#ffd6e8,#ffeef5);
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.container{
+    position:relative;
+    text-align:center;
+}
+
+.title{
+    font-family: 'Pacifico', cursive;
+    font-size:55px;
+    color:#fff;
+
+    text-shadow:
+    0 0 10px #ff1493,
+    0 0 20px #ff69b4,
+    0 0 40px #ff1493;
+
+    animation:titleGlow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ff1493;
+    }
+    to{
+        text-shadow:0 0 30px #ff1493,
+                    0 0 50px #ff69b4;
+    }
+}
+
+/* Cake */
+
+.cake{
+    position:relative;
+    width:220px;      /* आधी 320px होतं */
+    height:200px;     /* आधी 280px होतं */
+    margin:50px auto 0; /* Date खाली 50px gap */
+    animation:bounce 2s ease-in-out infinite;
+}
+
+.plate{
+    position:absolute;
+    bottom:0;
+    left:-20px;
+    width: 260px;
+    height:22px;
+    background:linear-gradient(to right,#ddd,#fff,#ddd);
+    border-radius:50%;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+
+.layer{
+    position:absolute;
+    width:250px;
+    height:60px;
+    left:5px;
+    border-radius:15px;
+    box-shadow:inset 0 -8px rgba(0,0,0,.1);
+}
+
+.layer-bottom{
+    position:absolute;
+    bottom:20px;
+    width:220px;
+    height:60px;
+    background:linear-gradient(to right,#ff4f81,#ff7aa2,#ff4f81);
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+
+.layer-middle{
+    position:absolute;
+    bottom:80px;
+    left:20px;
+    width:190px;
+    height:50px;
+    background:linear-gradient(to right,#ff82a9,#ffb3c7,#ff82a9);
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+
+.layer-top{
+    position:absolute;
+    bottom:130px;
+    left:40px;
+    width:140px;
+    height:45px;
+    background:linear-gradient(to right,#ffd6e7,#fff,#ffd6e7);
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+.icing{
+    position:absolute;
+    bottom:165px;
+    left:35px;
+    width:150px;
+    height:20px;
+    background:white;
+    border-radius:50px;
+    box-shadow:0 5px 12px rgba(255,255,255,.8);
+}
+
+/* Drips */
+
+.drip{
+    position:absolute;
+    background:#fff;
+    width:18px;
+    border-radius:10px;
+}
+
+.drip1{
+    height:40px;
+    left:55px;
+    bottom:145px;
+}
+
+.drip2{
+    height:55px;
+    left:120px;
+    bottom:130px;
+}
+
+.drip3{
+    height:35px;
+    left:180px;
+    bottom:150px;
+}
+
+/* Candles */
+
+.candle{
+    width:14px;
+    height:55px;
+    background:repeating-linear-gradient(
+        45deg,
+        white,
+        white 5px,
+        hotpink 5px,
+        hotpink 10px
+    );
+    border-radius:8px;
+    position:relative;
+}
+
+.candle{
+    width:12px;
+    height:50px;
+    background:white;
+    border-radius:5px;
+    position:relative;
+}
+
+.flame{
+    width:18px;
+    height:28px;
+    position:absolute;
+    top:-25px;
+    left:-2px;
+    background:radial-gradient(circle,yellow 10%,orange 70%,red 100%);
+    border-radius:50% 50% 50% 0;
+    transform:rotate(-45deg);
+    animation:fire .4s infinite alternate;
+}
+    /* ============================= */
+/* PREMIUM 3D BIRTHDAY CAKE */
+/* ============================= */
+
+.cake{
+    position:relative;
+    width:320px;
+    height:280px;
+    margin:auto;
+    animation:bounce 2s ease-in-out infinite;
+}
+
+/* Plate */
+
+.plate{
+    position:absolute;
+    bottom:0;
+    left:-20px;
+    width:360px;
+    height:25px;
+    background:linear-gradient(to right,#d9d9d9,#ffffff,#d9d9d9);
+    border-radius:50%;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* Bottom Layer */
+
+.layer-bottom{
+    position:absolute;
+    bottom:20px;
+    width:320px;
+    height:80px;
+    background:linear-gradient(90deg,#ff4d6d,#ff85a1,#ff4d6d);
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* Middle Layer */
+
+.layer-middle{
+    position:absolute;
+    bottom:100px;
+    left:25px;
+    width:270px;
+    height:70px;
+    background:linear-gradient(90deg,#ff7eb3,#ffc2d1,#ff7eb3);
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+
+/* Top Layer */
+
+.layer-top{
+    position:absolute;
+    bottom:170px;
+    left:50px;
+    width:220px;
+    height:60px;
+    background:linear-gradient(90deg,#ffe5ec,#ffffff,#ffe5ec);
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+/* Cream */
+
+.icing{
+    position:absolute;
+    bottom:215px;
+    left:45px;
+    width:230px;
+    height:30px;
+    background:white;
+    border-radius:50px;
+    box-shadow:0 0 20px rgba(255,255,255,.8);
+}
+
+/* Cream Drops */
+
+.drip{
+    position:absolute;
+    background:white;
+    width:18px;
+    border-radius:20px;
+}
+
+.drip1{
+    left:70px;
+    bottom:175px;
+    height:55px;
+}
+
+.drip2{
+    left:150px;
+    bottom:165px;
+    height:70px;
+}
+
+.drip3{
+    left:230px;
+    bottom:180px;
+    height:45px;
+}
+
+/* Sprinkles */
+
+.layer-bottom::after,
+.layer-middle::after,
+.layer-top::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    background:
+    radial-gradient(#fff 2px,transparent 3px),
+    radial-gradient(#ffd60a 2px,transparent 3px),
+    radial-gradient(#00d4ff 2px,transparent 3px),
+    radial-gradient(#90ee90 2px,transparent 3px);
+
+    background-size:30px 30px;
+
+    opacity:.9;
+}
+
+/* Candles */
+
+.candles{
+    position:absolute;
+    bottom:235px;
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.candle{
+
+    width:14px;
+    height:60px;
+
+    border-radius:8px;
+
+    background:repeating-linear-gradient(
+    45deg,
+    white 0px,
+    white 6px,
+    hotpink 6px,
+    hotpink 12px);
+
+    position:relative;
+
+}
+
+/* Flame */
+
+.flame{
+
+    position:absolute;
+
+    width:18px;
+    height:28px;
+
+    left:-2px;
+    top:-26px;
+
+    background:radial-gradient(circle,
+    yellow 10%,
+    orange 60%,
+    red 100%);
+
+    border-radius:50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    animation:fire .35s infinite alternate;
+
+}
+
+/* Cake Animation */
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes fire{
+
+    from{
+
+        transform:rotate(-45deg) scale(1);
+
+    }
+
+    to{
+
+        transform:rotate(-45deg) scale(1.2);
+
+    }
+
+}
+@keyframes fire{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.25);
+    }
+}
+/* ========================= */
+/* BALLOONS */
+/* ========================= */
+
+.balloons{
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    pointer-events:none;
+}
+
+.balloon{
+    width:55px;
+    height:70px;
+    border-radius:50%;
+    position:absolute;
+    animation:float 8s linear infinite;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:80px;
+    background:#666;
+    left:50%;
+    top:70px;
+}
+
+.red{
+    background:#ff4d6d;
+    left:8%;
+    animation-delay:0s;
+}
+
+.blue{
+    background:#4d96ff;
+    left:28%;
+    animation-delay:2s;
+}
+
+.green{
+    background:#38b000;
+    left:50%;
+    animation-delay:4s;
+}
+
+.yellow{
+    background:#ffbe0b;
+    left:70%;
+    animation-delay:1s;
+}
+
+.pink{
+    background:#ff66c4;
+    left:88%;
+    animation-delay:3s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(110vh);
+    }
+
+    100%{
+        transform:translateY(-130vh);
+    }
+
+}
+
+/* ========================= */
+/* CAKE ANIMATION */
+/* ========================= */
+
+.cake{
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+/* ========================= */
+/* SPARKLES */
+/* ========================= */
+
+body::before{
+
+    content:"✨ ✨ ✨ ✨ ✨";
+
+    position:absolute;
+
+    top:40px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:30px;
+
+    animation:spark 2s infinite alternate;
+
+}
+
+@keyframes spark{
+
+    from{
+
+        opacity:.4;
+
+    }
+
+    to{
+
+        opacity:1;
+
+        letter-spacing:12px;
+
+    }
+
+}
+/* ========================= */
+/* CONFETTI */
+/* ========================= */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    border-radius:50%;
+
+    animation:fall linear forwards;
+
+}
+    
+
+@keyframes fall{
+
+    from{
+
+        transform:translateY(-10vh) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(110vh) rotate(720deg);
+
+    }
+
+}
+    .photo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.photo img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid white;
+    box-shadow:0 0 25px hotpink;
+    animation:photoGlow 2s infinite alternate;
+}
+
+@keyframes photoGlow{
+    from{
+        transform:scale(1);
+        box-shadow:0 0 20px hotpink;
+    }
+    to{
+        transform:scale(1.05);
+        box-shadow:0 0 40px deeppink;
+    }
+}
+    /* ========================= */
+/* PHOTO FRAME */
+/* ========================= */
+
+.photo-frame{
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+    position:relative;
+}
+
+.photo-frame img{
+
+    width:240px;
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:10px solid white;
+
+    box-shadow:
+    0 0 20px #ff1493,
+    0 0 40px #ff69b4,
+    0 0 70px deeppink;
+
+    animation:
+    photoFloat 4s ease-in-out infinite,
+    photoGlow 2s infinite alternate;
+
+}
+
+/* Floating */
+
+@keyframes photoFloat{
+
+    0%,100%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+/* Glow */
+
+@keyframes photoGlow{
+
+    from{
+
+        box-shadow:
+        0 0 20px hotpink,
+        0 0 40px deeppink;
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 40px hotpink,
+        0 0 80px deeppink,
+        0 0 120px #ff1493;
+
+    }
+
+}
+    .firework{
+
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:explode 1.2s infinite;
+
+}
+
+.firework:nth-child(1){
+
+    left:15%;
+    top:15%;
+
+}
+
+.firework:nth-child(2){
+
+    right:18%;
+    top:20%;
+
+}
+
+.firework:nth-child(3){
+
+    left:50%;
+    top:8%;
+
+}
+
+@keyframes explode{
+
+    0%{
+
+        transform:scale(.2);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(18);
+
+        opacity:0;
+
+    }
+
+}
+    .birth-date{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:30px;
+    text-shadow:0 0 10px #ff1493;
+    animation:dateGlow 2s infinite alternate;
+}
+
+@keyframes dateGlow{
+    from{
+        opacity:0.7;
+        transform:scale(1);
+        text-shadow:0 0 10px hotpink;
+    }
+    to{
+        opacity:1;
+        transform:scale(1.05);
+        text-shadow:0 0 25px deeppink;
+    }
+}
+    /* ===================== */
+/* PHOTO */
+/* ===================== */
+
+.photo-frame{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.photo-frame img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+
+    box-shadow:
+    0 0 20px hotpink,
+    0 0 40px deeppink,
+    0 0 70px #ff1493;
+
+    animation:
+    photoFloat 4s ease-in-out infinite,
+    photoGlow 2s infinite alternate;
+}
+
+@keyframes photoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+@keyframes photoGlow{
+
+    from{
+
+        box-shadow:
+        0 0 20px hotpink,
+        0 0 40px deeppink;
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 40px hotpink,
+        0 0 80px deeppink,
+        0 0 120px #ff1493;
+
+    }
+
+}
+
+/* ===================== */
+/* DATE CARD */
+/* ===================== */
+
+.birth-card{
+
+    width:320px;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.2);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    border:2px solid rgba(255,255,255,.5);
+
+    box-shadow:
+    0 0 20px rgba(255,20,147,.5);
+
+    animation:cardGlow 2s infinite alternate;
+
+}
+
+.birth-text{
+
+    display:block;
+
+    color:white;
+
+    font-size:18px;
+
+    margin-top:8px;
+
+}
+
+.birth-card h2{
+
+    color:white;
+
+    margin-top:10px;
+
+    font-size:30px;
+
+}
+    .birth-medal{
+    margin-bottom:70px;
+}
+
+.cake-icon{
+
+    font-size:40px;
+
+}
+
+@keyframes cardGlow{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.05);
+
+    }
+
+}
+    .birth-medal{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.medal-text span{
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+.medal-text h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+    @keyframes titleGlow{
+
+    from{
+
+        text-shadow:
+        0 0 10px hotpink;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px hotpink,
+        0 0 40px deeppink,
+        0 0 70px #ff1493;
+
+    }
+
+}
